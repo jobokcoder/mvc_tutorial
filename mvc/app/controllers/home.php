@@ -2,9 +2,9 @@
 
 class Home extends Controller
 {
-    public function index()
+    public function index($param = '')
     {
-        echo 'Hello';
+        
     }
 }
 
