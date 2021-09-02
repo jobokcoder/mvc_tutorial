@@ -6,9 +6,12 @@ class Home extends Controller
     {
         $user = $this->model('User');
         $user->name = $name;
+        $user->connect($name);
         
         $this->view('home/index', ['name' => $user->name]);
     }
+
+   
 } 
 
 ?>
