@@ -17,7 +17,6 @@ class User
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $pdo->prepare("INSERT INTO test (id, name) VALUES (7, ?)");
             $success = $stmt->execute([$name]);
-            echo "success!";
         } catch (PDOException $pe) {
             die('PDOException : '. $pe->getMessage());
         } catch (Exception $e) {
